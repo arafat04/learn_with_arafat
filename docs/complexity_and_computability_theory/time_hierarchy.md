@@ -4,7 +4,7 @@ Abbreviations:
 
 Turing Machine $\to$ TM
 
-$\mathb{O}(f(n)) : the function grows at most as fast as $f(n)$
+$\mathbb{O}(f(n))$ : the function grows at most as fast as $f(n)$
 $o(f(n))$ : the function grows strictly slower than $f(n)$
 
 Example:
@@ -19,6 +19,35 @@ It is about in terms computation of algorithms, there is a hierarchy among time 
 
 For any time constructible Function $f : \mathbb{N} \to \mathbb{N}$ there exists a language $\mathbb{A}$ that is decidable by a TM in $\mathbb{O}(f(n))$ time but not in $o(\frac{f(n)}{\log_2 f(n)})$ time. 
 
+
+$$
+o( \frac{f(n)}{\log_2 f(n)} )
+$$
+
+This means:
+
+Any function that grows **strictly slower than**
+
+$$
+\frac{f(n)}{\log_2 f(n)}
+$$
+
+
+So the theorem says:
+
+There exists a language that:
+Can be solved in time $\mathbb{O}(f(n))$ but cannot be solved in any time that is asymptotically smaller than $\frac{f(n)}{\log_2 f(n)}$.
+
+For any reasonable time bound $f(n)$:
+
+There is always some problem that can be solved in time $f(n)$ but cannot be solved significantly faster — specifically, not in time smaller than 
+
+$$
+\frac{f(n)}{\log_2 f(n)}.
+$$
+
+So more time really does buy more computational power.
+
 ### Total Function:
 
 A function $f : \mathbb{N} \to \mathbb{N}$ (it is read $f$ is a function from natural natural to natural number, that is f is a function that takes a natural number as input and returns a natural number as output.) is total  function if for every input x of length $|x|$ = n, a deterministic Turing Machine (TM) halts on x and decide it in $f(n)$ steps. So for every input x, the function is decidable meaning it will halt on every input and either accept or reject it.
@@ -26,6 +55,7 @@ A function $f : \mathbb{N} \to \mathbb{N}$ (it is read $f$ is a function from na
 $\mathbb{TIME}(f(n))$ is the class of languages which can be decided by a TM in $\mathbb{O}(f(n))$ time.
 
 $\mathbb{TIME}(f(n))$ = {L ∣ L is decidable by a deterministic TM in $\mathbb{O}(f(n))$ time}
+
 
 **Why this is important for Time hierarchy theorem:**
 
