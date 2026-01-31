@@ -39,6 +39,8 @@ So for $\mathbb{O}(f(n))$, the function will grow at most as $f(n) : n \log n$, 
 $n \in o\big(n \log n\big), \quad
 n \log n \notin o(n)$
 
+**Time Hierarchy Theorem:**
+
 It is about in terms computation of algorithms, there is a hierarchy among time complexities.
 
 For any time constructible Function $f : \mathbb{N} \to \mathbb{N}$ there exists a language $\mathbb{A}$ that is decidable by a TM in $\mathbb{O}(f(n))$ time but not in $o(\frac{f(n)}{\log_2 f(n)})$ time. 
@@ -76,9 +78,9 @@ So more time really does buy more computational power.
 
 A function $f : \mathbb{N} \to \mathbb{N}$ (it is read $f$ is a function from natural natural to natural number, that is f is a function that takes a natural number as input and returns a natural number as output.) is total  function if for every input x of length $|x|$ = n, a deterministic Turing Machine (TM) halts on x and decide it in $f(n)$ steps. So for every input x, the function is decidable meaning it will halt on every input and either accept or reject it.
 
-$\mathbb{TIME}(f(n))$ is the class of languages which can be decided by a TM in $\mathbb{O}(f(n))$ time.
+$\mathcal{TIME}(f(n))$ is the class of languages which can be decided by a TM in $\mathbb{O}(f(n))$ time.
 
-$\mathbb{TIME}(f(n))$ = {L ∣ L is decidable by a deterministic TM in $\mathbb{O}(f(n))$ time}
+$\mathcal{TIME}(f(n))$ = {L ∣ L is decidable by a deterministic TM in $\mathbb{O}(f(n))$ time}
 
 
 **Why this is important for Time hierarchy theorem:**
